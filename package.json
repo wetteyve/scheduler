@@ -1,6 +1,6 @@
 {
   "name": "@wetteyve/scheduler",
-  "version": "0.0.2",
+  "version": "0.0.3-0",
   "description": "Template project for writing node package with napi-rs",
   "main": "index.js",
   "repository": {
