@@ -1,6 +1,6 @@
 {
   "name": "@wetteyve/rusty",
-  "version": "0.0.3-0",
+  "version": "0.0.4-0",
   "description": "Node package with napi-rs",
   "main": "index.js",
   "repository": {
