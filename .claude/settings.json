@@ -1,0 +1,97 @@
+{
+  "model": "opusplan",
+  "planning": {
+    "enabled": true,
+    "alwaysStartInPlanMode": true,
+    "planFile": ".claude/plan.md"
+  },
+  "project": {
+    "name": "@wetteyve/rusty",
+    "description": "Rust-powered Node.js native addon built with napi-rs",
+    "type": "napi-rs"
+  },
+  "build": {
+    "beforeEdit": ["yarn build"],
+    "afterCommit": ["yarn test"]
+  },
+  "preferences": {
+    "defaultBranch": "main",
+    "autoFormat": true,
+    "verboseLogging": true
+  },
+  "ignored": [
+    "node_modules/**",
+    "target/**",
+    "*.node",
+    ".git/**",
+    ".yarn/**",
+    "yarn.lock",
+    "Cargo.lock",
+    "index.js",
+    "index.d.ts",
+    "*.wasi.cjs",
+    "*.wasi-browser.js",
+    "wasi-worker*.mjs"
+  ],
+  "codeGuidelines": {
+    "rust": {
+      "formatting": "Use cargo fmt before committing",
+      "linting": "Address all clippy warnings",
+      "conventions": [
+        "Use snake_case for functions and variables",
+        "Add #[napi] macro for exported functions",
+        "Use appropriate napi types for parameters",
+        "Consider cross-platform compatibility",
+        "Add inline documentation for complex logic"
+      ]
+    },
+    "typescript": {
+      "formatting": "Use prettier (configured in package.json)",
+      "linting": "Use oxlint for JavaScript/TypeScript",
+      "conventions": [
+        "Follow auto-generated type definitions",
+        "Test both Node.js and WASM builds if applicable",
+        "Use AVA for test files"
+      ]
+    }
+  },
+  "workflow": {
+    "beforePR": [
+      "yarn format",
+      "yarn lint",
+      "yarn build",
+      "yarn test"
+    ],
+    "release": [
+      "Ensure all tests pass",
+      "Use npm version to bump version",
+      "Push tags to trigger GitHub Actions",
+      "Never run npm publish manually"
+    ]
+  },
+  "documentation": {
+    "primary": "CLAUDE.md",
+    "additional": [
+      "docs/overview.md",
+      "docs/setup.md",
+      "docs/testing.md",
+      "docs/ci-cd.md",
+      "docs/release.md",
+      "README.md"
+    ]
+  },
+  "keyFiles": [
+    "src/lib.rs",
+    "Cargo.toml",
+    "package.json",
+    "build.rs",
+    "__test__/index.spec.ts"
+  ],
+  "commands": {
+    "build": "yarn build",
+    "test": "yarn test",
+    "format": "yarn format",
+    "lint": "yarn lint",
+    "bench": "yarn bench"
+  }
+}
