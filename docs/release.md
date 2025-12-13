@@ -2,17 +2,19 @@
 
 ## Releasing the Package
 
-1. Add your **NPM_TOKEN** in GitHub:
+Ensure you have set your **NPM_TOKEN** in the `GitHub` project setting.
 
-    * `Settings → Secrets → Actions → New repository secret`
-2. Bump the version:
+In `Settings -> Secrets`, add **NPM_TOKEN** into it.
 
-   ```bash
-   npm version patch
-   git push
-   ```
+When you want to release the package:
 
-GitHub Actions will handle building and publishing all artifacts.
+```bash
+npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease [--preid=<prerelease-id>] | from-git]
+
+git push
+```
+
+GitHub actions will do the rest job for you.
 
 > ⚠️ **Do not run `npm publish` manually.**
 
