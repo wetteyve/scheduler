@@ -109,4 +109,6 @@ const { instance: __napiInstance, module: __wasiModule, napiModule: __napiModule
 })
 module.exports = __napiModule.exports
 module.exports.getArrayLength = __napiModule.exports.getArrayLength
+module.exports.guessingGame = __napiModule.exports.guessingGame
+module.exports.helloNapi = __napiModule.exports.helloNapi
 module.exports.plus100 = __napiModule.exports.plus100

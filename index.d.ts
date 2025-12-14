@@ -2,4 +2,8 @@
 /* eslint-disable */
 export declare function getArrayLength(arr: Array<unknown>): number
 
+export declare function guessingGame(): void
+
+export declare function helloNapi(input?: string | undefined | null): void
+
 export declare function plus100(input: number): number

@@ -558,4 +558,6 @@ if (!nativeBinding) {
 
 module.exports = nativeBinding
 module.exports.getArrayLength = nativeBinding.getArrayLength
+module.exports.guessingGame = nativeBinding.guessingGame
+module.exports.helloNapi = nativeBinding.helloNapi
 module.exports.plus100 = nativeBinding.plus100

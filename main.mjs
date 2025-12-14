@@ -1,4 +1,7 @@
-import { getArrayLength } from './index.js'
+import rusty from './index.js'
 
-const arr = [{}, 1, 'hello', true]
-console.log(getArrayLength(arr))
+console.log(rusty.getArrayLength([{}, 1, 'hello', true]));
+console.log(rusty.plus100(12));
+rusty.helloNapi();
+rusty.helloNapi("rusty");
+rusty.guessingGame();

@@ -5,15 +5,12 @@ import {
   WASI as __WASI,
 } from '@napi-rs/wasm-runtime'
 
-
-
 const __wasi = new __WASI({
   version: 'preview1',
 })
 
 const __wasmUrl = new URL('./rusty.wasm32-wasi.wasm', import.meta.url).href
 const __emnapiContext = __emnapiGetDefaultContext()
-
 
 const __sharedMemory = new WebAssembly.Memory({
   initial: 4000,
@@ -57,4 +54,6 @@ const {
 })
 export default __napiModule.exports
 export const getArrayLength = __napiModule.exports.getArrayLength
+export const guessingGame = __napiModule.exports.guessingGame
+export const helloNapi = __napiModule.exports.helloNapi
 export const plus100 = __napiModule.exports.plus100
