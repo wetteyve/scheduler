@@ -1,5 +1,5 @@
 #![deny(clippy::all)]
 
-mod guessing_game;
+mod game;
 
-pub use guessing_game::guessing_game;
+pub use game::guessing_game;
