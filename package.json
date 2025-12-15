@@ -61,7 +61,7 @@
     "lint": "oxlint .",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
-    "test:node": "node ./src/playground/playground.mjs",
+    "playground": "node ./src/playground/playground.mjs",
     "preversion": "napi build --platform && git add .",
     "version": "napi version",
     "quality:checks": "run-p lint format clippy",

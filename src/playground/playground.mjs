@@ -1,5 +1,5 @@
 import { helloNapi, guessingGame } from '../../index.js'
 
-helloNapi()
-helloNapi('rusty')
+console.log(helloNapi())
+console.log(helloNapi('rusty'))
 guessingGame()
