@@ -1,8 +1,18 @@
 import test from 'ava'
 
-import { plus100 } from '../index'
+import { helloNapi } from '../index'
 
-test('sync function from native code', (t) => {
-  const fixture = 42
-  t.is(plus100(fixture), fixture + 100)
+const defaultValue = 'Hello, napi-rs!'
+test('helloNapi', (t) => {
+  t.is(helloNapi(), defaultValue)
+})
+
+test('helloNapi with string input', (t) => {
+  const input = 'rusty'
+  t.is(helloNapi(input), `Hello, ${input}!`)
+})
+
+test('helloNapi throws with non-string input', (t) => {
+  const input = 4 as unknown as string
+  t.throws(() => helloNapi(input))
 })

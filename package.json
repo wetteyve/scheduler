@@ -57,12 +57,15 @@
     "format:prettier": "prettier . -w",
     "format:toml": "taplo format",
     "format:rs": "cargo fmt",
+    "clippy": "cargo clippy",
     "lint": "oxlint .",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
     "test:node": "node ./src/playground/playground.mjs",
     "preversion": "napi build --platform && git add .",
     "version": "napi version",
+    "quality:checks": "run-p lint format clippy",
+    "quality": "run-s build quality:checks",
     "prepare": "husky"
   },
   "devDependencies": {
