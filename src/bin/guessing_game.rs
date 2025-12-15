@@ -1,4 +1,4 @@
-use rusty::guessing_game::guessing_game;
+use rusty::guessing_game;
 
 // execute -> cargo run --bin guessing_game
 fn main() {

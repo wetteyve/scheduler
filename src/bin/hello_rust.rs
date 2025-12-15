@@ -1,4 +1,4 @@
-use rusty::hello_rust::hello_napi;
+use rusty::hello_napi;
 use std::env;
 
 // execute -> cargo run --bin hello_rust

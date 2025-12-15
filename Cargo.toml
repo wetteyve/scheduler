@@ -9,8 +9,10 @@ version = "0.1.0"
 crate-type = ["cdylib", "lib"]
 
 [dependencies]
-napi        = "3.7.0"
+napi        = { version = "3.7.0", features = ["napi6"] }
 napi-derive = "3.4.0"
+num-bigint  = "0.4.6"
+num-traits  = "0.2.19"
 rand        = "0.9.2"
 
 [build-dependencies]

@@ -53,5 +53,6 @@ const {
   },
 })
 export default __napiModule.exports
+export const fibonacci = __napiModule.exports.fibonacci
 export const guessingGame = __napiModule.exports.guessingGame
 export const helloNapi = __napiModule.exports.helloNapi

@@ -1,4 +1,8 @@
 #![deny(clippy::all)]
 
-pub mod guessing_game;
-pub mod hello_rust;
+pub mod game;
+pub use game::*;
+pub mod hello_napi;
+pub use hello_napi::*;
+pub mod fibonacci;
+pub use fibonacci::*;

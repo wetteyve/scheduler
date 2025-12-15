@@ -557,5 +557,6 @@ if (!nativeBinding) {
 }
 
 module.exports = nativeBinding
+module.exports.fibonacci = nativeBinding.fibonacci
 module.exports.guessingGame = nativeBinding.guessingGame
 module.exports.helloNapi = nativeBinding.helloNapi
